@@ -1,0 +1,4 @@
+-reducer need to add movie to ticket
+-delete movie from ticket
+
+Events- all events calls recommend to display
