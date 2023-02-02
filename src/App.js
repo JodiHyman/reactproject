@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from "./components/Header"
 import Footer from './components/Footer';
 import Home from "./components/Home"
-import Hero from "./components/Hero"
+import Hero from "./components/Hero3"
 import MovieCard from "./components/Movies/MovieCard"
 import MainLayout from "./components/layouts/MainLayout"
 
