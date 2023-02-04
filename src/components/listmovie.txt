@@ -1,0 +1,29 @@
+const renderData = ({listData}) => {
+        if(listData){ //check that info is there
+            if(listData.length>0){//check that there is more than 1 item.
+             listData.map((item) => //we map the array and look for movie_id
+
+//this app looks like movie app needed
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import MovieCredit from './MovieCredit';
+import MovieDetail from './MovieDetail';
+
+function Detail() {
+
+    const params = useParams();
+
+    return (
+        <>
+            <MovieDetail id={params.id} />
+            <MovieCredit id={params.id} />
+        </>
+    );
+}
+
+export default Detail;
+
+from https://github.com/nejlasahin/movie-app-with-react
+
+moviedetail app.
+https://144p.netlify.app/detail/536554
