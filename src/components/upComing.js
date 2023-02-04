@@ -1,21 +1,38 @@
-import React from "react"
-import "./common.css"
+import React,{useState, useEffect} from "react";
+import axios from "axios"
+import UpComingDisplay from "./UpComingDisplay";
 
-const UpComing = ()=> {
+const url= "http://3.17.216.66:4000/upcomingmovies"
+// const url= "http://localhost:8000/latest"
+// const url= "https://jsonplaceholder.typicode.com/photos"
+// const url=".././data/db.json"
 
-return (
+// const url="https://my-json-server.typicode.com/jodihyman/react-learning-edu/latest"
+
+const UpComing =()=> {
+    const [upComingMovies, setUpcoming] = useState([])
+useEffect(()=>{axios.get(url)
+  .then((response) => {
+    // handle success
+    //  console.log(response.data);
+  setUpcoming(response.data)
+  })
+  .catch((error) => {
+    // handle error
+    console.log(error);
+  })
+}, [])
+
+
+
+return(
 <>
-<div className="card">
-  <img src="..." className="card-img-top" alt="..."></img>
-  <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" className="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+<UpComingDisplay movie={upComingMovies} />
 </>
-)
-}
-export default UpComing
 
-// thus shows the movies are coming in the next month
+)
+
+
+
+    }
+export default UpComing

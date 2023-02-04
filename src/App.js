@@ -6,10 +6,14 @@ import Home from "./components/Home"
 import Hero from "./components/Hero3"
 import MovieCard from "./components/Movies/MovieCard"
 import MainPage from './components/MainPage';
-import Main1 from "./components/Main1";
+import UpComing from "./components/upComing";
+import Event from "./components/Events/AllEvents"
 
 
 import Cover from "./components/Poster"
+import Order from './components/Order/Order';
+
+
 const App=() => {
   return (
     
@@ -19,8 +23,9 @@ const App=() => {
       <Routes>
 
         <Route path="/" element={<Home />} />
+        <Route path="/latest" element={<Home />} />
         <Route path="/mainpage" element={<MainPage />} />
-        <Route path="/main" element={<Main1 />} />
+        <Route path="/upcoming" element={<UpComing />} />
         <Route path="/latest/:_id" element={<Hero />} />
 {/* <Route path="/:name" element={<Cover />} /> */}
 
@@ -30,6 +35,8 @@ const App=() => {
         <Route path="/" element={<Home />} /> */}
 <Route path="/movie_details/:_id" element={<MovieCard />} />
         <Route path="/MovieCard" element={<MovieCard />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/event_list" element={<Event />} />
 
       </Routes>
        

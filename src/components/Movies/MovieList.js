@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 //working set
-const Recommended =(props) => {
+const MovieList =(props) => {
     return(
         <>
         <section className="text-gray-600 body-font">
@@ -27,8 +27,7 @@ const Recommended =(props) => {
   <img src={movie.imageUrl} alt={movie.name} key={movie.name} className="object-contain object-center h-full w-8/12"></img>
   </div>
   <h2 className="text-xl font-medium title-font text-gray-900 mt-5 ">{movie.name}</h2>
-  <Link to={`/latest/${movie._id}`} key={movie.name} className="text-indigo-500 inline-flex items-center mt-3">See Movie
-Details
+  <Link to={`/latest/${movie._id}`} key={movie.name} className="text-indigo-500 inline-flex items-center mt-3">See Details
 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
   className="w-4 h-4 ml-2" viewBox="0 0 24 24">
   <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -45,4 +44,4 @@ Details
     )
 
 }
-export default Recommended
+export default MovieList

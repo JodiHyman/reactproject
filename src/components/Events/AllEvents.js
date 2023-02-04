@@ -1,11 +1,11 @@
 import React,{useState, useEffect} from "react";
 import axios from "axios"
-import Recommended from "../Recommended";
-import "../common.css";
+import MovieList from "../Movies/MovieList";
 
 
-// const url= "http://3.17.216.66:4000/events"
-const url="https://my-json-server.typicode.com/jodihyman/react-learning-edu/events"
+
+const url= "http://3.17.216.66:4000/events"
+// const url="https://my-json-server.typicode.com/jodihyman/react-learning-edu/events"
 
 const AllEvents = () => {
  const [events, setEvents] = useState([])
@@ -23,7 +23,7 @@ useEffect(()=>{axios.get(url)
 
   return(
 <>
-<Recommended movie={events} />
+<MovieList movie={events} />
 </>
 
 )

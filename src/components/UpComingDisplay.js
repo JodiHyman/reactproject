@@ -1,13 +1,9 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
+const UpComingDisplay = (props) => {
 
-
-
-
-//working set
-const Recommended =(props) => {
-    return(
+ return(
         <>
         <section className="text-gray-600 body-font">
             <div className="container px-5 py-24 mx-auto">
@@ -16,17 +12,17 @@ const Recommended =(props) => {
         <div className="w-24 h-full bg-indigo-500"></div>
       </div>
       <div className="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-        <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">The Latest Movies</h1>
-        <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Select a movie to start your entertainment fun.</p>
+        <h1 className="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Up Coming Movies</h1>
+        <p className="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Select a movie to plan ahead for your entertainment fun.</p>
       </div>
     </div>
      <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
         {props.movie.map((movie) => (
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6 items-center">    
-        <div className="rounded-lg h-96 overflow-hidden ">
-  <img src={movie.imageUrl} alt={movie.name} key={movie.name} className="object-contain object-center h-full w-8/12"></img>
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">    
+        <div className="rounded-lg h-64 overflow-hidden">
+  <img src={movie.imageUrl} alt={movie.name} key={movie.name} className="object-cover object-center h-3/6 w-full"></img>
   </div>
-  <h2 className="text-xl font-medium title-font text-gray-900 mt-5 ">{movie.name}</h2>
+  <h2 className="text-xl font-medium title-font text-gray-900 mt-5">{movie.name}</h2>
   <Link to={`/latest/${movie._id}`} key={movie.name} className="text-indigo-500 inline-flex items-center mt-3">See Movie
 Details
 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
@@ -45,4 +41,6 @@ Details
     )
 
 }
-export default Recommended
+export default UpComingDisplay
+
+// thus shows the movies are coming in the next month
