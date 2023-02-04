@@ -2,12 +2,14 @@ import React,{useState, useEffect} from "react";
 import axios from "axios"
 import Recommended from "./Recommended";
 
-const url= "http://3.17.216.66:4000/latest"
+// const url= "/api/latest"
+// const url= "https://3.17.216.66:4000/latest"
+
 // const url= "http://localhost:8000/latest"
 // const url= "https://jsonplaceholder.typicode.com/photos"
 // const url=".././data/db.json"
 
-// const url="https://my-json-server.typicode.com/jodihyman/react-learning-edu/latest"
+const url="https://my-json-server.typicode.com/jodihyman/react-learning-edu/latest"
 
 const Home =()=> {
     const [latestMovies, setLatest] = useState([])
