@@ -7,18 +7,24 @@ const MovieCard = (props)=> {
 
 return (
 <>
-<div>
-{props.movie.map((movie) => (
- 
- <div className="card" key={movie._id}>
+   {props.movie.map((movie) => (
+        <div class="p-4 md:w-1/3 sm:mb-0 mb-6 items-center">    
+        <div className="rounded-lg h-96 overflow-hidden ">
+  <img src={movie.imageUrl} alt={movie.name} key={movie.name} className="object-contain object-center h-full w-8/12"></img>
+  </div>
+  <h2 className="text-xl font-medium title-font text-gray-900 mt-5 ">{movie.name}</h2>
+  <Link to={`/latest/${movie._id}`} key={movie.name} className="text-indigo-500 inline-flex items-center mt-3">See Movie
+Details
+<svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+  className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+  <path d="M5 12h14M12 5l7 7-7 7"></path>
+</svg></Link>
   
-  <img src={movie.imageUrl} alt='movie' key={movie._id} className="card-img-top"></img>
-  <div className="card-body">
-    <h5 className="card-title">{movie.name}</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-   {/* <div> <Link to={`/latest/${movie._id}`} key={movie._id} className="btn btn-primary">Movie Details</Link> </div> */}
-   </div>
-  </div>))} </div></>
+  </div>
+  )
+  
+  )}
+  </>
   
 )
  }

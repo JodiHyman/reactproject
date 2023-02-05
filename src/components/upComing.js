@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from "react";
 import axios from "axios"
 import UpComingDisplay from "./UpComingDisplay";
+import MovieCard from "./Movies/MovieCard";
+import { PageWrapper } from "./PageWrapper";
 
 const url= "http://3.17.216.66:4000/upcomingmovies"
 // const url= "http://localhost:8000/latest"
@@ -28,11 +30,17 @@ useEffect(()=>{axios.get(url)
 return(
 <>
 <UpComingDisplay movie={upComingMovies} />
-</>
-
+</> 
 )
 
 
+// )
 
+// return(
+//   <PageWrapper>
+// <MovieCard movie={upComingMovies} />
+// </PageWrapper>
+
+// )
     }
 export default UpComing
