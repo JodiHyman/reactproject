@@ -25,11 +25,13 @@ const{amount} = useSelector((store)=>store.cart);
     <Link to="/event_list" className="mr-5 hover:text-gray-900">Nearby Events</Link>
   </div>
   <div className='relative block'>
+
+  <Link to="/cart">
   <BagIcon/>
-  <div className="absolute -top-2.5 -right-2.5 w-5 h-5 flex items-center justify-center content-center rounded-full bg-indigo-300 ">
+   <div className="absolute -top-2.5 -right-2.5 w-5 h-5 flex items-center justify-center content-center rounded-full bg-indigo-300 ">
      <p className="mb-0 text-lg text-white " >{amount}</p>
         
-            </div>
+            </div></Link>
               
      {/* <div className="amount-container">
      <p className="total-amount" >{amount}</p>

@@ -1,9 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit';
-import cartReducer from './features/cartSlice';
-// import apiReducer from './features/apiSlice';
+import { legacy_createStore as createStore, applyMiddleware} from 'redux';
+import promiseMiddleware from 'redux-promise';
+import reducer from '../redux/reducers/mainReducer';
 
-export const store = configureStore({
-  reducer: {
-    cart: cartReducer,
-  },
-})
+let store = createStore(reducer,applyMiddleware(promiseMiddleware));
+
+export default store;

@@ -2,3 +2,5 @@
 -delete movie from ticket
 
 Events- all events calls recommend to display
+
+Have all axios calls in one file with reducers/redux

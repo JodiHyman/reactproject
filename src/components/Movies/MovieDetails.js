@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 
+
+//displays the movie but is not reusable yet
 export default function MovieDetails() {
   const [data, setData] = useState([]);
 

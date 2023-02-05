@@ -9,7 +9,6 @@ import MainPage from './components/MainPage';
 import UpComing from "./components/upComing";
 import Event from "./components/Events/AllEvents"
 
-
 import Cover from "./components/Poster"
 import Order from './components/Order/Order';
 import CartContainer from './components/CartContainer';
