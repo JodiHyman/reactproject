@@ -12,6 +12,7 @@ import Event from "./components/Events/AllEvents"
 
 import Cover from "./components/Poster"
 import Order from './components/Order/Order';
+import CartContainer from './components/CartContainer';
 
 
 const App=() => {
@@ -37,7 +38,7 @@ const App=() => {
         <Route path="/MovieCard" element={<MovieCard />} />
         <Route path="/order" element={<Order />} />
         <Route path="/event_list" element={<Event />} />
-
+        <Route path="/cart" element={<CartContainer />} />
       </Routes>
        
  <Footer />

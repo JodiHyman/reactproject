@@ -3,6 +3,7 @@ import {BagIcon} from './BagIcon'
 import {useSelector} from 'react-redux'
 
 const Header = () => {
+const{amount} = useSelector((store)=>store.cart);
 
     return (
         <header className="text-gray-600 body-font">
@@ -23,13 +24,18 @@ const Header = () => {
     <Link to="/" className="mr-5 hover:text-gray-900">All Movies</Link>
     <Link to="/event_list" className="mr-5 hover:text-gray-900">Nearby Events</Link>
   </div>
-  
+  <div className='relative block'>
   <BagIcon/>
-  <div className='amount-container'>
-              <p className='total-amount'>0</p>
+  <div className="absolute -top-2.5 -right-2.5 w-5 h-5 flex items-center justify-center content-center rounded-full bg-indigo-300 ">
+     <p className="mb-0 text-lg text-white " >{amount}</p>
+        
             </div>
               
-           
+     {/* <div className="amount-container">
+     <p className="total-amount" >{amount}</p>
+        
+            </div>    */}
+    </div>   
 </nav>
 </div>
         </header>
