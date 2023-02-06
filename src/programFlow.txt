@@ -2,3 +2,13 @@
 -delete movie from ticket
 
 Events- all events calls recommend to display
+
+get detail page for each link 
+
+use the example on 3 schools https://www.w3schools.com/react/react_customhooks.asp
+1. create the call file
+2.for each endpoint create a file that calls that end point and displays that page
+3. for each endpoint create a file that calls that end point and movie/event item and then displays using on MovieDetails page.
+4. finish adding reducers to add to cart
+5. clean up and condense files.
+6. convert file and app to native android

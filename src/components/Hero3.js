@@ -7,8 +7,16 @@ const Hero3 =() => {
 
 const [details, setDetails] = useState([])
 const [_id, setID ] = useState(useParams())   
-const url= "http://3.17.216.66:4000/latest/"; 
+const url= "http://3.17.216.66:4000/latest"; 
+const [locate, setLocate]= useSearchParams({})
 
+// console.log(...locate);
+// console.log(useSearchParams());
+// let url1= []
+// setLocate(locate);
+
+// useEffect(()=>{setLocate(locate)},)
+// url1=locate.pathname
 
 useEffect(()=>{axios.get(url)
   .then(response=> {
@@ -28,6 +36,10 @@ useEffect(()=>{axios.get(url)
  
 console.log("the ");
 console.log(_id);
+console.log("before the search param ");
+console.log(locate.pathanme);
+
+// console.log(url1);
 
 //a for loop is need to compare id to locate
 
@@ -52,7 +64,7 @@ return (
       <p>This is my house y&apos;all!</p>
       {details.map(home => <div>{home._id}</div>)}
     </div>
-  <h1>jo</h1>
+  <h1>jo </h1>
 </>
 )
   }

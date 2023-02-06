@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import customFetch from '../..axios';
 
 
 
@@ -16,7 +16,7 @@ const upComing = createSlice({
     }
     );
 
-const fetchUpComing = () => {
+customFetch = () => {
 
    axios.get('myurl')
      .then(response => {
